@@ -20,7 +20,7 @@ class Chat extends React.Component {
   };
 
   messageSend = (message) => {
-    message = {message: message, author: this.props.username};
+    message = { message: message, author: this.props.username };
     this.addMessage(message);
     socket.emit("chat message", message);
   };
@@ -45,7 +45,10 @@ class Chat extends React.Component {
           unauthenticator={this.props.unauthenticator}
           username={this.props.username}
         />
-        <MessageList messageList={this.state.messageList} />
+        <MessageList
+          messageList={this.state.messageList}
+          username={this.props.username}
+        />
         <TextInput messageSend={this.messageSend} />
       </div>
     );

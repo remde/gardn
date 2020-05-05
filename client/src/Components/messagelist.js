@@ -4,7 +4,13 @@ import "./messagelist.css";
 
 const MessageList = (props) => {
   const messages = props.messageList.map((message) => {
-    return <MessageCard username={message.author} message={message.message} />;
+    return (
+      <MessageCard
+        author={message.author}
+        username={props.username}
+        message={message.message}
+      />
+    );
   });
 
   return <div className="message-list">{messages}</div>;
