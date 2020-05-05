@@ -25,6 +25,7 @@ class Login extends React.Component {
                 value={this.state.term}
                 onChange={(e) => this.setState({ term: e.target.value })}
                 placeholder="Insira seu nome"
+                required
               ></input>
               <button className="ui button">Entrar</button>
             </div>
