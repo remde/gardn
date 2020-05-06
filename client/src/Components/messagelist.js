@@ -7,10 +7,10 @@ const MessageList = (props) => {
     return (
       <MessageCard
         author={message.author}
-        username={props.username}
         message={message.message}
         date={message.date}
         key={message.id}
+        localId={props.id}
       />
     );
   });

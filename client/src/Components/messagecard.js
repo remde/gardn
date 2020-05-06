@@ -6,7 +6,7 @@ class MessageCard extends React.Component {
     return (
       <div
         className={
-          this.props.username === this.props.author ? "card-right" : "card-left"
+          this.props.messageId === this.props.localId ? "card-left" : "card-right"
         }
       >
         <div className="author-style"> {this.props.author}</div>
