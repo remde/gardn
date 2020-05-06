@@ -32,7 +32,7 @@ class Chat extends React.Component {
       message: message,
       author: this.props.username,
       date: this.getTime(),
-      id: socket.id,
+      id: socket.id
     };
     newMessageKey = 1 + this.state.messageKey;
     this.setState({ messageKey: newMessageKey });

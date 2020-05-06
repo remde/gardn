@@ -9,7 +9,7 @@ const MessageList = (props) => {
         author={message.author}
         message={message.message}
         date={message.date}
-        key={message.id}
+        messageId={message.id}
         localId={props.id}
       />
     );
