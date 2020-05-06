@@ -1,4 +1,5 @@
 import React from "react";
+import "./navbar.css";
 
 class Navbar extends React.Component {
   onButtonClick = (event) => {
@@ -7,16 +8,12 @@ class Navbar extends React.Component {
 
   render() {
     return (
-      <div>
-        <div className="ui menu">
-          <div className="item">
-            <div onClick={this.onButtonClick} className="ui primary button">
-              Sair
-            </div>
-          </div>
-          <div className="item">
-            <h5 className="ui header">Seja bem-vindo, {this.props.username}</h5>
-          </div>
+      <div className="navbar">
+        <div className="welcome">
+          Seja bem-vindo, <span className="bolded">{this.props.username}</span>
+        </div>
+        <div className="leave">
+          <button className="leaveButton">Sair</button>
         </div>
       </div>
     );

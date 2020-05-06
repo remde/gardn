@@ -23,8 +23,8 @@ class TextInput extends React.Component {
                   value={this.state.term}
                   onChange={(e) => this.setState({ term: e.target.value })}
                   required="required"
-                  pattern="\S+"
-                  title="Insira uma mensagem válida"
+                  pattern="\S+.*"
+                  title="A primeira letra não pode ser um espaço em branco"
                 />
               </form>
             </div>

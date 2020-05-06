@@ -1,31 +1,39 @@
 .card-right {
   overflow-wrap: break-word;
-  background-color: aqua;
+  background: #a908d9 0% 0% no-repeat padding-box;
   display: inline-block;
   padding: 5px;
   align-self: flex-end;
   max-width: 80%;
+  min-width: 10%;
   margin: 5px;
-  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
-  border-radius: 6px;
+  border-radius: 50px 50px 2px 50px;
   text-align: right;
+  padding-left: 10px;
+  color: white;
+  font-family: "Muli", sans-serif;
+  letter-spacing: 0.03px;
 }
 
 .card-left {
   overflow-wrap: break-word;
-  background-color: mistyrose;
+  background: #9e9e9e33 0% 0% no-repeat padding-box;
   display: inline-block;
   align-self: flex-start;
   padding: 5px;
+  padding-right: 10px;
   max-width: 80%;
+  min-width: 10%;
   margin: 5px;
-  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
-  border-radius: 6px;
+  border-radius: 50px 50px 50px 2px;
+  font-family: "Muli", sans-serif;
+  letter-spacing: 0.03px;
+  color: #4d4d4d;
 }
 
 .author-style {
   font-weight: bold;
-  text-decoration: underline;
+  text-align: center;
 }
 
 .date-style {

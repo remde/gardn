@@ -32,7 +32,8 @@ class Chat extends React.Component {
       message: message,
       author: this.props.username,
       date: this.getTime(),
-      id: socket.id
+      id: socket.id,
+      key: this.state.messageKey,
     };
     newMessageKey = 1 + this.state.messageKey;
     this.setState({ messageKey: newMessageKey });
@@ -60,7 +61,11 @@ class Chat extends React.Component {
           unauthenticator={this.props.unauthenticator}
           username={this.props.username}
         />
-        <MessageList messageList={this.state.messageList} id={socket.id} />
+        <MessageList
+          messageList={this.state.messageList}
+          id={socket.id}
+          key={this.state.messageKey}
+        />
         <TextInput messageSend={this.messageSend} />
       </div>
     );

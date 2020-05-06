@@ -1,12 +1,15 @@
 import React from "react";
 import "./messagecard.css";
+import ScrollableFeed from "react-scrollable-feed";
 
 class MessageCard extends React.Component {
   render() {
     return (
       <div
         className={
-          this.props.messageId === this.props.localId ? "card-left" : "card-right"
+          this.props.messageId === this.props.localId
+            ? "card-right"
+            : "card-left"
         }
       >
         <div className="author-style"> {this.props.author}</div>

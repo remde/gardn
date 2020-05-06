@@ -8,28 +8,34 @@
   height: 100vh;
   overflow: hidden;
   background-size: cover;
-  background: radial-gradient(
-      ellipse at center,
-      rgba(0, 0, 0, 0) 0%,
-      rgba(0, 0, 0, 0) 0%,
-      rgba(5, 0, 0, 0.65) 100%
-    ),
-    url(../Images/wallpaper.png) no-repeat center center scroll;
 }
 
 h1 {
-  font-style: normal;
-  font-weight: bold;
-  color: #eee;
+  font-family: "Muli", sans-serif;
+  font-weight: 900;
+  color: #212121;
   font-size: 11vmin;
-  letter-spacing: 0.03em;
-  line-height: 1;
-  text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.8);
-  margin-bottom: 35px;
+  letter-spacing: 0;
+  margin-bottom: -2px;
+}
+
+p {
+  font-family: "Muli", sans-serif;
+  font-size: 3vmin;
 }
 
 input {
-  margin-bottom: 20px;
+  margin-top: 10px;
+  background: transparent;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  width: 30vw;
+  font-family: "Muli", sans-serif;
+}
+
+.nameInput {
+  width: 20%;
 }
 
 .visitante a {
@@ -46,15 +52,15 @@ input {
 }
 
 .link-button {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  text-decoration: underline;
-  display: inline;
-  margin: 0;
-  padding: 0;
-  color: gray;
-}
-.link-button:hover {
-  color: white;
+  background: #a908d9 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px #00000029;
+  border-radius: 44px;
+  text-align: center;
+  font-family: "Muli", sans-serif;
+  font-weight: bold;
+  letter-spacing: 0px;
+  color: #ffffff;
+  opacity: 1;
+  height: 40px;
+  width: 120px;
 }
