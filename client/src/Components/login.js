@@ -42,7 +42,7 @@ class Login extends React.Component {
           <div className="space"></div>
           <div className="visitante">
             <button className="link-button" onClick={this.onButtonClick}>
-              ou clique aqui para entrar como visitanty
+              ou clique aqui para entrar como visitante
             </button>
           </div>
         </section>
