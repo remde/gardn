@@ -9,6 +9,7 @@ const MessageList = (props) => {
         author={message.author}
         username={props.username}
         message={message.message}
+        date={message.date}
       />
     );
   });

@@ -9,6 +9,13 @@ const socket = socketIOClient("localhost:5000/");
 class Chat extends React.Component {
   state = { messageList: [], socket: null };
 
+  getTime = () => {
+    var myDate = new Date()
+      .toTimeString()
+      .replace(/.*(\d{2}:\d{2}:\d{2}).*/, "$1");
+    return myDate;
+  };
+
   componentDidMount = () => {
     this.messageReceive();
   };
@@ -20,7 +27,11 @@ class Chat extends React.Component {
   };
 
   messageSend = (message) => {
-    message = { message: message, author: this.props.username };
+    message = {
+      message: message,
+      author: this.props.username,
+      date: this.getTime(),
+    };
     this.addMessage(message);
     socket.emit("chat message", message);
   };

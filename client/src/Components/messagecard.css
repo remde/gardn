@@ -1,19 +1,33 @@
 .card-right {
-  text-align: right;
-  max-width: 50%;
-  margin-left: 50%;
-  border: 1px solid black;
   overflow-wrap: break-word;
+  background-color: aqua;
+  display: inline-block;
+  padding: 5px;
+  align-self: flex-end;
+  max-width: 80%;
+  margin: 5px;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+  border-radius: 6px;
+  text-align: right;
 }
 
 .card-left {
-  text-align: left;
-  max-width: 50%;
-  border: 1px solid black;
-  overflow: hidden;
   overflow-wrap: break-word;
+  background-color: mistyrose;
+  display: inline-block;
+  align-self: flex-start;
+  padding: 5px;
+  max-width: 80%;
+  margin: 5px;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+  border-radius: 6px;
 }
 
-.message-card {
-  min-width: 90px;
+.author-style {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.date-style {
+  font-size: 11px;
 }
