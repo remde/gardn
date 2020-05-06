@@ -22,6 +22,9 @@ class TextInput extends React.Component {
                   type="text"
                   value={this.state.term}
                   onChange={(e) => this.setState({ term: e.target.value })}
+                  required="required"
+                  pattern="\S+"
+                  title="Insira uma mensagem válida"
                 />
               </form>
             </div>

@@ -2,7 +2,6 @@ import React from "react";
 import ReactDOM from "react-dom";
 import Login from "./Components/login";
 import Chat from "./Components/chat";
-import socketIOClient from "socket.io-client";
 
 class App extends React.Component {
   state = { username: "", isAuthenticated: false, response: "" };
@@ -14,7 +13,7 @@ class App extends React.Component {
   Unauthenticator = () => {
     this.setState({ username: "", isAuthenticated: false });
   };
-  
+
   render() {
     return (
       <div>
@@ -23,7 +22,7 @@ class App extends React.Component {
         </div>
         {this.state.isAuthenticated === false ? (
           //not authenticated
-          <Login authenticator={this.Authenticator}/>
+          <Login authenticator={this.Authenticator} />
         ) : (
           //authenticated
           <Chat

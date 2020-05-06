@@ -26,6 +26,8 @@ class Login extends React.Component {
                 onChange={(e) => this.setState({ term: e.target.value })}
                 placeholder="Insira seu nome"
                 required
+                pattern="[A-Za-z0-9]{1,20}"
+                title="1 a 20 dígitos sem caracteres especiais"
               ></input>
               <button className="ui button">Entrar</button>
             </div>
