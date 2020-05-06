@@ -6,6 +6,7 @@ class Login extends React.Component {
   state = { term: "" };
 
   onFormSubmit = (event) => {
+    event.preventDefault();
     this.props.authenticator(this.state.term);
   };
 
@@ -29,7 +30,13 @@ class Login extends React.Component {
                 pattern="[A-Za-z0-9]{1,20}"
                 title="1 a 20 dígitos sem caracteres especiais"
               ></input>
-              <button className="ui button">Entrar</button>
+              <button
+                type="button"
+                onClick={this.onButtonClick}
+                className="ui button"
+              >
+                Entrar
+              </button>
             </div>
           </form>
           <div className="space"></div>
