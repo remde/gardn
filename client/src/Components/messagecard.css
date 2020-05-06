@@ -1,3 +1,19 @@
 .card-right {
   text-align: right;
+  max-width: 50%;
+  margin-left: 50%;
+  border: 1px solid black;
+  overflow-wrap: break-word;
+}
+
+.card-left {
+  text-align: left;
+  max-width: 50%;
+  border: 1px solid black;
+  overflow: hidden;
+  overflow-wrap: break-word;
+}
+
+.message-card {
+  min-width: 90px;
 }

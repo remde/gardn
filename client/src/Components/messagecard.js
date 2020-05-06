@@ -12,7 +12,9 @@ class MessageCard extends React.Component {
               : "card-left"
           }
         >
-          {this.props.author}: {this.props.message}
+          <div className="card-style">
+            {this.props.author}: {this.props.message}
+          </div>
         </div>
       </div>
     );
