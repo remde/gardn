@@ -7,7 +7,7 @@ import socketIOClient from "socket.io-client";
 const socket = socketIOClient("localhost:5000/");
 
 class Chat extends React.Component {
-  state = { messageList: [], socket: null };
+  state = { messageList: [] };
 
   getTime = () => {
     var myDate = new Date()
@@ -31,6 +31,7 @@ class Chat extends React.Component {
       message: message,
       author: this.props.username,
       date: this.getTime(),
+      id: socket.id
     };
     this.addMessage(message);
     socket.emit("chat message", message);
@@ -40,7 +41,7 @@ class Chat extends React.Component {
     this.props.unauthenticator();
   };
 
-  addMessage = (message, received) => {
+  addMessage = (message) => {
     let newEntry = message;
     let newState = this.state.messageList;
     newState.push(newEntry);
@@ -58,7 +59,7 @@ class Chat extends React.Component {
         />
         <MessageList
           messageList={this.state.messageList}
-          username={this.props.username}
+          id={socket.id}
         />
         <TextInput messageSend={this.messageSend} />
       </div>
