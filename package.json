@@ -2,13 +2,14 @@
   "name": "node-react",
   "version": "1.0.0",
   "scripts": {
-    "start": "node server.js"
+    "client": "cd client && npm start",
+    "start": "concurrently \"node server.js\" \"npm run client\""
   },
   "dependencies": {
     "express": "^4.17.1",
     "socket.io": "^2.3.0"
   },
   "devDependencies": {
-    "concurrently": "^3.5.0"
+    "concurrently": "^3.6.1"
   }
 }
