@@ -32,7 +32,7 @@ class Login extends React.Component {
               ></input>
               <button
                 type="button"
-                onClick={this.onButtonClick}
+                onClick={this.onFormSubmit}
                 className="ui button"
               >
                 Entrar
@@ -41,11 +41,7 @@ class Login extends React.Component {
           </form>
           <div className="space"></div>
           <div className="visitante">
-            <button
-              type="button"
-              className="link-button"
-              onClick={this.onButtonClick}
-            >
+            <button className="link-button" onClick={this.onButtonClick}>
               ou clique aqui para entrar como visitante
             </button>
           </div>
