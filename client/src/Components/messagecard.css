@@ -9,7 +9,6 @@
   margin: 5px;
   border-radius: 50px 50px 2px 50px;
   text-align: right;
-  padding-left: 10px;
   color: white;
   font-family: "Muli", sans-serif;
   letter-spacing: 0.03px;
@@ -17,13 +16,10 @@
 
 .card-left {
   padding: 10px 20px 5px 20px;
-
   overflow-wrap: break-word;
   background: #9e9e9e33 0% 0% no-repeat padding-box;
   display: inline-block;
   align-self: flex-start;
-  padding: 15px;
-  padding-right: 10px;
   max-width: 80%;
   min-width: 10%;
   margin: 5px;

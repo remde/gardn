@@ -1,0 +1,9 @@
+.mainScreen {
+  display: flex;
+  flex-direction: row;
+  margin-top: 15px;
+}
+
+.online-list {
+  width: 30%;
+}

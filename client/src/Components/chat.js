@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from "../Components/navbar";
-import MessageList from "../Components/messagelist";
+import MainScreen from "../Components/mainscreen";
 import TextInput from "../Components/textinput";
 import socketIOClient from "socket.io-client";
 
@@ -62,7 +62,7 @@ class Chat extends React.Component {
           unauthenticator={this.props.unauthenticator}
           username={this.props.username}
         />
-        <MessageList
+        <MainScreen
           messageList={this.state.messageList}
           id={socket.id}
           key={this.state.messageKey}
