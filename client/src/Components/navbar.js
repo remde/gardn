@@ -13,7 +13,9 @@ class Navbar extends React.Component {
           Seja bem-vindo, <span className="bolded">{this.props.username}</span>
         </div>
         <div className="leave">
-          <button className="leaveButton">Sair</button>
+          <button onClick={this.onButtonClick} className="leaveButton">
+            Sair
+          </button>
         </div>
       </div>
     );

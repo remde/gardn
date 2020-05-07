@@ -11,7 +11,11 @@ class Login extends React.Component {
   };
 
   onButtonClick = (event) => {
-    this.props.authenticator("visitante");
+    if (this.state.term.match(/[A-Za-z0-9]{1,20}/)) {
+      this.props.authenticator(this.state.term);
+    } else {
+      window.alert("1 a 20 dígito sem espaços, apenas números e letras");
+    }
   };
 
   render() {
@@ -32,16 +36,13 @@ class Login extends React.Component {
                 title="1 a 20 dígitos sem caracteres especiais"
               ></input>
             </div>
-            <div className="space"></div>
-            <div className="visitante">
-              <button
-                type="submit"
-                className="link-button"
-                onClick={this.onFormSubmit}
-              >
-                Entrar
-              </button>
-            </div>
+            <input
+              type="button"
+              className="link-button"
+              onClick={this.onButtonClick}
+              value="Entrar"
+              pattern="[A-Za-z0-9]{1,20}"
+            ></input>
           </form>
         </section>
       </div>
