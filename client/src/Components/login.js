@@ -7,14 +7,24 @@ class Login extends React.Component {
 
   onFormSubmit = (event) => {
     event.preventDefault();
-    this.props.authenticator(this.state.term);
+    if (
+      this.state.term.match(/[A-Za-z0-9]{1,20}/) &&
+      this.state.term.length <= 20
+    ) {
+      this.props.authenticator(this.state.term);
+    } else {
+      window.alert("1 a 20 dígitos sem espaços, apenas números e letras");
+    }
   };
 
   onButtonClick = (event) => {
-    if (this.state.term.match(/[A-Za-z0-9]{1,20}/)) {
+    if (
+      this.state.term.match(/[A-Za-z0-9]{1,20}/) &&
+      this.state.term.length <= 20
+    ) {
       this.props.authenticator(this.state.term);
     } else {
-      window.alert("1 a 20 dígito sem espaços, apenas números e letras");
+      window.alert("1 a 20 dígitos sem espaços, apenas números e letras");
     }
   };
 
@@ -32,7 +42,6 @@ class Login extends React.Component {
                 onChange={(e) => this.setState({ term: e.target.value })}
                 placeholder="Insira seu codinome"
                 required
-                pattern="[A-Za-z0-9]{1,20}"
                 title="1 a 20 dígitos sem caracteres especiais"
               ></input>
             </div>
