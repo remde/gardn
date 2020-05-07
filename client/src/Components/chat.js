@@ -13,7 +13,8 @@ class Chat extends React.Component {
     var myDate = new Date()
       .toTimeString()
       .replace(/.*(\d{2}:\d{2}:\d{2}).*/, "$1");
-    return myDate;
+    console.log(myDate.slice(2, 4));
+    return myDate.slice(0, 5);
   };
 
   componentDidMount = () => {

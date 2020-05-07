@@ -1,6 +1,5 @@
 import React from "react";
 import "./messagecard.css";
-import ScrollableFeed from "react-scrollable-feed";
 
 class MessageCard extends React.Component {
   render() {
