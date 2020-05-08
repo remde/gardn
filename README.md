@@ -1,3 +1,5 @@
+You can view this project [clicking here](http://161.35.136.196/).
+
 Gardn is a web message app based on React (Javascript, HTML, CSS, Node.js) made by [Fernando Remde](https://www.github.com/Remde) and [Bruno Moraes](https://www.github.com/brunosdm). <br />To start it in development mode, run:
 
 ### `npm start`
@@ -5,4 +7,4 @@ Gardn is a web message app based on React (Javascript, HTML, CSS, Node.js) made 
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 <br />
-Work in progress. Currently on deployment phase.
+Work in progress.
