@@ -36,14 +36,12 @@ input {
 
 .nameInput {
   width: 20%;
-}
-
-.space {
-  margin: 15px;
+  font-size: 17px;
+  margin-top: 13px;
 }
 
 .link-button {
-  margin-top: 15px;
+  margin-top: 20px;
   background: #a908d9 0% 0% no-repeat padding-box;
   box-shadow: 0px 3px 6px #00000029;
   border-radius: 44px;
