@@ -6,8 +6,8 @@
   align-self: flex-end;
   max-width: 80%;
   min-width: 10%;
-  margin: 5px;
-  border-radius: 50px 50px 2px 50px;
+  margin: 5px 20px 5px 5px;
+  border-radius: 30px 30px 2px 30px;
   text-align: right;
   color: white;
   font-family: "Muli", sans-serif;
@@ -22,8 +22,8 @@
   align-self: flex-start;
   max-width: 80%;
   min-width: 10%;
-  margin: 5px;
-  border-radius: 50px 50px 50px 2px;
+  margin: 5px 5px 5px 20px;
+  border-radius: 30px 30px 30px 2px;
   font-family: "Muli", sans-serif;
   letter-spacing: 0.03px;
   color: #4d4d4d;
@@ -35,4 +35,5 @@
 
 .date-style {
   font-size: 10px;
+  opacity: 0.5;
 }
