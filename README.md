@@ -5,4 +5,5 @@ Gardn is a web message app based on React (Javascript, HTML, CSS, Node.js) made 
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 <br />
-Work in progress.
+Work in progress. Currently on deployment phase.
+![Login Screen](/client/Images/gardn-login.png)
