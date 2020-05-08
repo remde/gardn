@@ -4,7 +4,7 @@ import MainScreen from "../Components/mainscreen";
 import TextInput from "../Components/textinput";
 import socketIOClient from "socket.io-client";
 
-const socket = socketIOClient("localhost:5000/");
+const socket = socketIOClient("http://161.35.136.196:5000/");
 
 class Chat extends React.Component {
   state = { messageList: [], socket: null, messageKey: 0 };
@@ -13,7 +13,6 @@ class Chat extends React.Component {
     var myDate = new Date()
       .toTimeString()
       .replace(/.*(\d{2}:\d{2}:\d{2}).*/, "$1");
-    console.log(myDate.slice(2, 4));
     return myDate.slice(0, 5);
   };
 
