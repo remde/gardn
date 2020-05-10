@@ -9,24 +9,18 @@ const socket = socketIOClient("http://161.35.136.196:5000/");
 class Chat extends React.Component {
   state = { messageList: [], messageKey: 0, userList: [] };
 
+  componentDidMount = () => {
+    socket.emit("user update", this.props.username);
+    this.userListReceive();
+    this.messageReceive();
+  };
+
   getTime = () => {
     console.log(this.state.userList);
     var myDate = new Date()
       .toTimeString()
       .replace(/.*(\d{2}:\d{2}:\d{2}).*/, "$1");
     return myDate.slice(0, 5);
-  };
-
-  componentDidMount = () => {
-    this.userListUpdate();
-    this.userListReceive();
-    this.messageReceive();
-  };
-
-  userListUpdate = () => {
-    socket.on("connect", () => {
-      socket.emit("user update", this.props.name);
-    });
   };
 
   userListReceive = () => {

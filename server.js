@@ -22,9 +22,9 @@ userList = {};
 
 io.on("connect", (socket) => {
 
-  socket.on("add user", (name) => {
-    userList.push({socket.id: name});
-    socket.emit("user update", userList.values);
+  socket.on("user update", (name) => {
+    userList[socket.id] = name;
+    socket.emit("user update", Object.values(userList));
   });
 
   socket.on("chat message", (msg) => {
@@ -32,8 +32,8 @@ io.on("connect", (socket) => {
   });
 
   socket.on("disconnect", () => {
-    userList.delete[socket.id];
-    socket.broadcast.emit("user update", userList.values());
+    delete userList[socket.id];
+    socket.broadcast.emit("user update", Object.values(userList));
   });
 
 });

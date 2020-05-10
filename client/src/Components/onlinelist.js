@@ -4,12 +4,14 @@ import "./onlinelist.css";
 class OnlineList extends React.Component {
   render() {
     const userName = this.props.userList.map((user) => {
-      return user;
+      return (
+        <div className="whos-on">{user}</div>
+      );
     });
 
     return (
       <div className="online-list">
-        <div className="whos-on">{userName}</div>
+        {userName}
       </div>
     );
   }
