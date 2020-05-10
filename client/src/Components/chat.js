@@ -7,9 +7,10 @@ import socketIOClient from "socket.io-client";
 const socket = socketIOClient("http://161.35.136.196:5000/");
 
 class Chat extends React.Component {
-  state = { messageList: [], messageKey: 0, userList: []};
+  state = { messageList: [], messageKey: 0, userList: [] };
 
   getTime = () => {
+    console.log(this.state.userList);
     var myDate = new Date()
       .toTimeString()
       .replace(/.*(\d{2}:\d{2}:\d{2}).*/, "$1");
@@ -30,7 +31,7 @@ class Chat extends React.Component {
 
   userListReceive = () => {
     socket.on("user update", (userList) => {
-      this.setState({userList: userList});
+      this.setState({ userList: userList });
     });
   };
 
