@@ -18,10 +18,22 @@ const io = require("socket.io")(server, {
 
 const port = process.env.PORT || 5000;
 
+userList = {};
+
 io.on("connect", (socket) => {
+
+  socket.on("add user", (name) => {
+    userList.push({socket.id: name});
+    socket.emit("user update", userList.values);
+  });
 
   socket.on("chat message", (msg) => {
     socket.broadcast.emit("chat message", msg);
+  });
+
+  socket.on("disconnect", () => {
+    userList.delete[socket.id];
+    socket.broadcast.emit("user update", userList.values());
   });
 
 });
