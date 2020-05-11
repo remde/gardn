@@ -24,7 +24,7 @@ io.on("connect", (socket) => {
 
   socket.on("user update", (name) => {
     userList[socket.id] = name;
-    socket.emit("user update", Object.values(userList));
+    io.emit("user update", Object.values(userList));
   });
 
   socket.on("chat message", (msg) => {
@@ -33,7 +33,7 @@ io.on("connect", (socket) => {
 
   socket.on("disconnect", () => {
     delete userList[socket.id];
-    socket.broadcast.emit("user update", Object.values(userList));
+    io.emit("user update", Object.values(userList));
   });
 
 });
