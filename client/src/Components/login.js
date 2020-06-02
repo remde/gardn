@@ -1,6 +1,7 @@
 import React from "react";
 
 import "./login.css";
+import Logo from "../Images/logo.svg";
 
 class Login extends React.Component {
   state = { term: "" };
@@ -37,8 +38,10 @@ class Login extends React.Component {
             role="img"
             aria-label="Image Description"
           >
-            <h1>Gardn.</h1>
-            <p>Converse anonimamente.</p>
+            <div className="logo">
+              <img src={Logo} alt="Logo" />
+            </div>
+            <p>converse anonimamente.</p>
             <form onSubmit={this.onFormSubmit}>
               <div className="nameInput">
                 <input
