@@ -1,5 +1,6 @@
 import React from "react";
 import "./textinput.css";
+import Send from "../Images/send.svg";
 
 class TextInput extends React.Component {
   state = { term: "" };
@@ -12,24 +13,21 @@ class TextInput extends React.Component {
 
   render() {
     return (
-      <div className="ui container">
-        <div className="text-input">
-          <div className="ui form">
-            <div className="field">
-              <form onSubmit={this.onFormSubmit}>
-                <label>Escreva sua mensagem</label>
-                <input
-                  type="text"
-                  value={this.state.term}
-                  onChange={(e) => this.setState({ term: e.target.value })}
-                  required="required"
-                  pattern="\S+.*"
-                  title="A primeira letra não pode ser um espaço em branco"
-                />
-              </form>
-            </div>
-          </div>
-        </div>
+      <div className="text-input">
+        <form className="input-form" onSubmit={this.onFormSubmit}>
+          <input
+            type="text"
+            placeholder="Escreva sua mensagem"
+            value={this.state.term}
+            onChange={(e) => this.setState({ term: e.target.value })}
+            required="required"
+            pattern="\S+.*"
+            title="A primeira letra não pode ser um espaço em branco"
+          />
+          <button>
+            <img src={Send} alt="send message" />
+          </button>
+        </form>
       </div>
     );
   }

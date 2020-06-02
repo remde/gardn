@@ -1,11 +1,26 @@
 .online-list {
-  width: 30%;
-  height: 70vh;
+  width: 25%;
+  height: 79.3vh;
+  background: #098743 0% 0% no-repeat padding-box;
+  box-shadow: 0px 6px 6px #0000001a;
+  border-radius: 50px;
+  opacity: 1;
+  float: right;
+  padding: 40px;
 }
 
 .whos-on {
+  margin-left: 10px;
   font-family: "Muli", sans-serif;
-  text-align: center;
-  color: #4d4d4d;
+  letter-spacing: 0.72px;
+  color: #ffffff;
   width: 100%;
+}
+
+.online-title {
+  margin-bottom: 20px;
+  letter-spacing: 0.72px;
+  color: #7dea8e;
+  font-family: "Muli", sans-serif;
+  font-weight: 900;
 }

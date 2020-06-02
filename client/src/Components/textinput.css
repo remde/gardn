@@ -1,8 +1,45 @@
-.text-input {
-  bottom: 50px;
-  height: 10vh;
-  margin-top: 20px;
-  width: 70%;
+.input-form {
+  display: flex;
+  width: 72.5%;
+  float: left;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 6px 6px #00000029;
+  border-radius: 38px;
+  margin-top: 22px;
+  padding: 0 14px 14px 14px;
+  align-items: center;
+}
+
+.text-input input {
+  text-align: left;
+  color: black;
+  border: none;
+  font-size: 2vmin;
+  font-weight: 300;
   font-family: "Muli", sans-serif;
-  color: #4d4d4d;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.text-input ::placeholder {
+  color: #00000061;
+  border: none;
+  font-size: 2vmin;
+  font-weight: 300;
+  font-family: "Muli", sans-serif;
+}
+
+.input-form img {
+  height: 30px;
+  margin-right: 20px;
+  margin-top: 18px;
+}
+
+.input-form button {
+  background-color: Transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
 }

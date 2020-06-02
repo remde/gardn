@@ -3,6 +3,7 @@ import Navbar from "../Components/navbar";
 import MainScreen from "../Components/mainscreen";
 import TextInput from "../Components/textinput";
 import socketIOClient from "socket.io-client";
+import "./chat.css";
 
 const socket = socketIOClient("http://0.0.0.0:5000/");
 
@@ -65,18 +66,21 @@ class Chat extends React.Component {
 
   render() {
     return (
-      <div className="ui container">
-        <Navbar
-          unauthenticator={this.props.unauthenticator}
-          username={this.props.username}
-        />
-        <MainScreen
-          messageList={this.state.messageList}
-          id={socket.id}
-          key={this.state.messageKey}
-          userList={this.state.userList}
-        />
-        <TextInput messageSend={this.messageSend} />
+      <div className="chat">
+        <div className="ui container">
+          <Navbar
+            unauthenticator={this.props.unauthenticator}
+            username={this.props.username}
+          />
+          <MainScreen
+            messageList={this.state.messageList}
+            id={socket.id}
+            key={this.state.messageKey}
+            userList={this.state.userList}
+            messageSend={this.messageSend}
+          />
+          <TextInput messageSend={this.messageSend} />
+        </div>
       </div>
     );
   }

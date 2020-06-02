@@ -12,9 +12,7 @@ class MainScreen extends React.Component {
           id={this.props.id}
           key={this.props.key}
         />
-        <OnlineList
-          userList={this.props.userList}
-        />
+        <OnlineList userList={this.props.userList} />
       </div>
     );
   }
