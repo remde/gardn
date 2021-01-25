@@ -11,4 +11,3 @@ And the server with:
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser. You might need Docker or manually install the dependencies with npm i both for client and server. 
 
 <br />
-Work in progress.
