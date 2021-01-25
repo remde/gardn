@@ -5,7 +5,7 @@ import TextInput from "../Components/textinput";
 import socketIOClient from "socket.io-client";
 import "./chat.css";
 
-const socket = socketIOClient("http://0.0.0.0:5000/");
+const socket = socketIOClient("http://161.35.136.196:5000/");
 
 class Chat extends React.Component {
   state = { messageList: [], messageKey: 0, userList: [] };

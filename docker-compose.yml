@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  client:
+    build: ./client
+    volumes:
+      - ./client:/usr/src/client
+    ports:
+      - 3000:3000
+  server:
+    build: ./server
+    volumes:
+      - ./client:/usr/src/server
+    ports:
+      - 5000:5000
